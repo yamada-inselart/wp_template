@@ -1,0 +1,589 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+/*--------------------------
+	
+--------------------------*/
+/*--------------------------
+	フォントの設定
+--------------------------*/
+/*--------------------------
+	カラーの設定
+--------------------------*/
+/*--------------------------
+	以下共通
+--------------------------*/
+/*--------------------------
+	共通設定
+--------------------------*/
+.wrap {
+  font-size: 16px;
+  font-size: 1.6rem;
+  overflow: hidden; }
+
+.inner {
+  width: 980px;
+  margin: 0 auto; }
+  @media screen and (max-width: 1024px) {
+    .inner {
+      width: 95%; } }
+
+.align-l {
+  text-align: left; }
+
+.align-c {
+  text-align: center; }
+
+.align-r {
+  text-align: right; }
+
+.clear:after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.relative {
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+/*--------------------------
+	レイアウト用
+--------------------------*/
+.col2 {
+  float: left;
+  width: 48.5%; }
+  @media screen and (max-width: 640px) {
+    .col2 {
+      float: none;
+      margin-bottom: 30px;
+      margin-bottom: 3rem;
+      width: 100%; } }
+  .col2:nth-child(2n) {
+    float: right; }
+    @media screen and (max-width: 640px) {
+      .col2:nth-child(2n) {
+        float: none; } }
+  .col2.col2-last {
+    float: right;
+    margin-right: 0; }
+    @media screen and (max-width: 640px) {
+      .col2.col2-last {
+        float: none; } }
+
+.col3 {
+  float: left;
+  margin-right: 2%;
+  width: 32%; }
+  @media screen and (max-width: 640px) {
+    .col3 {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 30px;
+      margin-bottom: 3rem;
+      width: 100%; } }
+  .col3:nth-child(3n) {
+    margin-right: 0; }
+  .col3.col3-last {
+    margin-right: 0; }
+
+.col4 {
+  float: left;
+  margin-right: 2%;
+  width: 23.5%; }
+  @media screen and (max-width: 1024px) {
+    .col4 {
+      margin-bottom: 30px;
+      margin-bottom: 3rem;
+      margin-right: 0;
+      width: 48.5%; } }
+  .col4:nth-child(4n) {
+    margin-right: 0; }
+    @media screen and (max-width: 1024px) {
+      .col4:nth-child(4n) {
+        float: right; } }
+  .col4.col4-last {
+    margin-right: 0; }
+    @media screen and (max-width: 1024px) {
+      .col4.col4-last {
+        float: right; } }
+
+/*--------------------------
+	レスポンシブ 設定
+--------------------------*/
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 52.5%; }
+
+  .pcContent {
+    display: none; } }
+.spContent {
+  display: none; }
+  @media screen and (max-width: 640px) {
+    .spContent {
+      display: block; } }
+
+/*--------------------------
+	padding margin 調整用
+--------------------------*/
+.mt60 {
+  margin-top: 60px; }
+
+.mb60 {
+  margin-bottom: 60px; }
+
+.pt60 {
+  padding-top: 60px; }
+
+.pb60 {
+  padding-bottom: 60px; }
+
+.mt45 {
+  margin-top: 45px; }
+
+.mb45 {
+  margin-bottom: 45px; }
+
+.pt45 {
+  padding-top: 45px; }
+
+.pb45 {
+  padding-bottom: 45px; }
+
+.mt30 {
+  margin-top: 30px; }
+
+.mb30 {
+  margin-bottom: 30px; }
+
+.pt30 {
+  padding-top: 30px; }
+
+.pb30 {
+  padding-bottom: 30px; }
+
+.mt15 {
+  margin-top: 15px; }
+
+.mb15 {
+  margin-bottom: 15px; }
+
+.pt15 {
+  padding-top: 15px; }
+
+.pb15 {
+  padding-bottom: 15px; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mb10 {
+  margin-bottom: 10px; }
+
+.pt10 {
+  padding-top: 10px; }
+
+.pb10 {
+  padding-bottom: 10px; }
+
+.mt5 {
+  margin-top: 5px; }
+
+.mb5 {
+  margin-bottom: 5px; }
+
+.pt5 {
+  padding-top: 5px; }
+
+.pb5 {
+  padding-bottom: 5px; }
+
+/* Scss Document */
+/*------------------------------
+	共通
+------------------------------*/
+a {
+  color: inherit; }
+
+a:hover {
+  text-decoration: underline; }
+
+img {
+  max-width: 100%; }
+
+/*------------------------------
+	article
+------------------------------*/
+.article_info {
+  font-size: 12px; }
+
+.article_info:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.article_date {
+  margin-right: 10px; }
+
+.article_cat .post-categories:after {
+  content: '';
+  clear: both;
+  display: block; }
+
+.article_cat li {
+  float: left;
+  margin-right: 10px; }
+
+.article_single .article_thumb {
+  text-align: center;
+  margin: 60px 0; }
+
+/*------------------------------
+	ナビゲーション
+------------------------------*/
+/*------------------------------
+	パンくずナビ
+------------------------------*/
+#breadcrumb.isHome ul li:last-child {
+  display: none; }
+
+#breadcrumb {
+  font-size: 13px;
+  margin: 15px auto; }
+
+#breadcrumb ul li {
+  float: left;
+  margin-right: 1em; }
+
+#breadcrumb ul li:before {
+  content: '>';
+  padding-right: 1em; }
+
+#breadcrumb ul li:first-child {
+  background: none;
+  text-indent: 0em; }
+
+#breadcrumb ul li:first-child:before {
+  content: none;
+  padding: 0; }
+
+/*------------------------------
+	ページネーション
+------------------------------*/
+.wp-pagenavi {
+  text-align: center;
+  clear: both;
+  margin: 60px 0; }
+
+.wp-pagenavi a, .wp-pagenavi span {
+  color: #999;
+  background-color: #FFF;
+  border: solid 1px #e0e0d2;
+  padding: 8px 15px;
+  margin: 0 2px;
+  white-space: nowrap;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  text-align: center;
+  text-decoration: none; }
+
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #ccc;
+  border-color: #ccc; }
+
+.wp-pagenavi span.current {
+  color: #FFF;
+  background-color: #aaa;
+  border-color: #ddd;
+  font-weight: bold; }
+
+/*------------------------------
+	サイドバー
+------------------------------*/
+/*------------------------------
+	ウィジェット
+------------------------------*/
+.side_tit {
+  display: none; }
+
+.wp_widget {
+  margin-bottom: 30px; }
+  .wp_widget .widget_tit {
+    margin-bottom: 15px; }
+
+/*------------------------------
+	Search
+------------------------------*/
+.screen-reader-text {
+  display: none; }
+
+#s {
+  border: 1px solid #ddd;
+  font-size: 16px;
+  line-height: 1.8;
+  width: 160px; }
+
+#searchsubmit {
+  background: #999;
+  border: 1px solid #ddd;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px; }
+
+/*------------------------------
+	アーカイブ・シングルページ
+------------------------------*/
+/*------------------------------
+	SNSボタン
+------------------------------*/
+.sns_lists:after {
+  clear: both;
+  content: "";
+  display: block; }
+
+.sns_lists li {
+  background: #ddd;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+  margin-right: 5px; }
+
+.archive_sns {
+  margin: 20px 0; }
+
+.archive_sns .twitter:hover {
+  background: #55acee; }
+
+.archive_sns .facebook:hover {
+  background: #3b5998; }
+
+.archive_sns .hatebu:hover {
+  background: #008FDE; }
+
+.archive_sns .gplus:hover {
+  background: #dd4b39; }
+
+.archive_sns .pocket:hover {
+  background: #ee4056; }
+
+.article_sns .twitter {
+  background: #55acee; }
+
+.article_sns .facebook {
+  background: #3b5998; }
+
+.article_sns .hatebu {
+  background: #008FDE; }
+
+.article_sns .gplus {
+  background: #dd4b39; }
+
+.article_sns .pocket {
+  background: #ee4056; }
+
+.sns_lists li a {
+  color: #fff;
+  padding: 5px 10px;
+  text-decoration: none; }
+
+.archive_sns li a {
+  padding: 5px 15px; }
+
+.archive_sns li:last-child {
+  margin: 0; }
+
+.article_sns li .sns_txt {
+  font-size: 13px;
+  font-family: Verdana;
+  padding-left: 5px; }
+
+.fa-hatebu:before {
+  content: "B!";
+  font-family: Verdana;
+  font-weight: bold; }
+
+@media screen and (max-width: 640px) {
+  .archive_sns {
+    display: none; }
+
+  .article_sns li .sns_txt {
+    display: none; }
+
+  .article_sns li a {
+    padding: 5px 20px; } }
+/*------------------------------
+	ネイティブCSS
+------------------------------*/
+/*------------------------------
+	Content( 記事の本文 )
+------------------------------*/
+.wp_content {
+  line-height: 1.8;
+  margin-bottom: 60px;
+  /* img */ }
+  .wp_content:after {
+    content: "";
+    clear: both;
+    display: block; }
+  .wp_content strong {
+    font-weight: bold; }
+  .wp_content em {
+    font-style: italic; }
+  .wp_content blockquote {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px; }
+  .wp_content .aligncenter {
+    display: block;
+    margin: 0 auto; }
+  .wp_content .alignright {
+    float: right;
+    margin-left: 15px !important; }
+  .wp_content .alignleft {
+    float: left;
+    margin-right: 15px !important; }
+  .wp_content img[class*="wp-image-"],
+  .wp_content img[class*="attachment-"] {
+    height: auto;
+    max-width: 100%;
+    margin: 15px 0; }
+  .wp_content .wp-caption {
+    max-width: 100%; }
+  .wp_content p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px; }
+  .wp_content ul {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: disc; }
+  .wp_content ol {
+    margin: 1em 0;
+    padding-left: 40px;
+    list-style-type: decimal; }
+  .wp_content blockquote {
+    margin: 0 0 1em 0;
+    padding: 50px 50px 40px;
+    background: #f2f2f2;
+    background: -moz-linear-gradient(top, white 0%, #f8f8f8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f8f8f8));
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=0 );
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #c1c1c1; }
+  .wp_content blockquote:before {
+    content: '"';
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 40px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #999; }
+  .wp_content blockquote:after {
+    content: '"';
+    font-style: italic;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 60px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #999; }
+  .wp_content pre {
+    margin: 1em 0;
+    padding: 1em;
+    color: #000000;
+    white-space: pre-wrap;
+    /* css-3 */
+    white-space: -moz-pre-wrap;
+    /* Mozilla, since 1999 */
+    white-space: -pre-wrap;
+    /* Opera 4-6 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* Internet Explorer 5.5+ */ }
+  .wp_content h2 {
+    border-bottom: solid 1px #333;
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 30px 0; }
+  .wp_content h3 {
+    font-size: 21px;
+    line-height: 120%;
+    margin: 30px 0;
+    font-weight: 700;
+    line-height: 120%;
+    padding: 10px 14px;
+    background: #f3f3f3;
+    border-bottom: solid 1px #333; }
+  .wp_content h4 {
+    border-left: solid 4px #333;
+    border-bottom: solid 1px #333;
+    font-size: 18px;
+    padding: 5px 10px;
+    margin: 30px 0; }
+
+@media screen and (max-width: 640px) {
+  .wp_content h2 {
+    font-size: 18px; }
+  .wp_content h3 {
+    font-size: 16px; }
+  .wp_content h4 {
+    font-size: 14px; } }
+/* Scss Document */
+#gHead {
+  border-bottom: 1px solid #666;
+  padding: 45px 0;
+  text-align: center; }
+
+#gFoot {
+  border-top: 1px solid #666;
+  padding: 45px 0;
+  text-align: center; }
+
+.content {
+  margin: 60px 0; }
+
+.mainContent {
+  float: left;
+  width: 700px; }
+
+.sideContent {
+  float: right;
+  width: 220px; }
+
+/*--------------------------
+	メインのスタイル
+--------------------------*/

@@ -1,0 +1,162 @@
+
+// 共通モジュールやパーツを纏めたファイルです。
+
+/*--------------------------
+	共通設定
+--------------------------*/
+
+// 全体囲み用
+.wrap{
+	font-size: #{$fontsize}px;
+	font-size: #{$fontsize-rem}rem;
+    overflow: hidden;
+}
+.inner{
+	width: $width;
+	margin: 0 auto;
+	@include max-screen($bp-tab) {
+		width: 95%;
+	}
+}
+.align-l {
+	text-align: left;
+}
+.align-c {
+	text-align: center;
+}
+.align-r {
+	text-align: right;
+}
+.clear:after {
+	clear: both;
+	content: "";
+	display: block;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.relative{
+	position: relative;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+/*--------------------------
+	レイアウト用
+--------------------------*/
+.col2 {
+    float: left;
+    width: 48.5%;
+	@include max-screen($bp-sp) {
+        float: none;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+        width: 100%;
+	}
+	&:nth-child(2n) {
+    	float: right;
+		@include max-screen($bp-sp) {
+			float: none;
+		}
+	}
+	&.col2-last {
+    	float: right;
+    	margin-right: 0;
+		@include max-screen($bp-sp) {
+			float: none;
+		}
+	}
+}
+.col3 {
+    float: left;
+    margin-right: 2%;
+    width: 32%;
+	@include max-screen($bp-sp) {
+        float: none;
+		margin-right: 0;
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+        width: 100%;
+	}
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+	&.col3-last {
+    	margin-right: 0;
+	}
+}
+.col4 {
+    float: left;
+    margin-right: 2%;
+    width: 23.5%;
+	@include max-screen($bp-tab) {
+        margin-bottom: 30px;
+        margin-bottom: 3rem;
+        margin-right: 0;
+        width: 48.5%;
+	}
+	&:nth-child(4n) {
+    	margin-right: 0;
+		@include max-screen($bp-tab) {
+			float: right;
+		}
+	}
+	&.col4-last {
+    	margin-right: 0;
+		@include max-screen($bp-tab) {
+			float: right;
+		}
+	}
+}
+
+/*--------------------------
+	レスポンシブ 設定
+--------------------------*/
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 52.5%;
+    }
+    .pcContent {
+        display: none;
+    }
+}
+.spContent {
+    display: none;
+	@include max-screen($bp-sp) {
+		display: block;
+	}
+}
+
+/*--------------------------
+	padding margin 調整用
+--------------------------*/
+$i: 60; // padding marginの最大値
+@while $i > 0 {
+	.mt#{$i} {
+		margin-top: #{$i}px;
+	}
+	.mb#{$i} {
+		margin-bottom: #{$i}px;
+	}
+	.pt#{$i} {
+		padding-top: #{$i}px;
+	}
+	.pb#{$i} {
+		padding-bottom: #{$i}px;
+	}	
+	
+	@if $i > 60{
+		$i: $i / 2;
+	} @elseif $i > 20 {
+		$i: $i - 15;
+	} @else {
+		$i: $i - 5;
+	}
+}

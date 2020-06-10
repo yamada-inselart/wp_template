@@ -1,0 +1,76 @@
+
+// @mixinや@extendを纏めたファイルです。
+
+
+/*--------------------------
+	以下共通
+--------------------------*/
+
+// フォントサイズ
+@mixin font-size($size) {
+  font-size: $size + px;
+  font-size: ($size / 10) + rem;
+}
+
+// clearfix
+@mixin clear {
+  *zoom: 1;
+  
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// position
+@mixin absolute-tL($top: 0, $left: 0) {
+  position: absolute;
+  top: $top + px;
+  left: $left + px;
+}
+@mixin absolute-tR($top: 0, $right: 0) {
+  position: absolute;
+  top: $top + px;
+  right: $right + px;
+}
+@mixin absolute-bL($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom + px;
+  left: $left + px;
+}
+@mixin absolute-bR($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom + px;
+  right: $right + px;
+}
+
+// translateで中央に配置
+@mixin translate-center {
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+// マイナスマージンで中央に配置
+@mixin margin-center($mt: 0, $ml: 0) {
+	margin-top: -#{$mt}px;
+	margin-left: -#{$ml}px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+// breakpoint
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}

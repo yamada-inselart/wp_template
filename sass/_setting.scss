@@ -1,0 +1,37 @@
+// 設定用ファイルです。
+
+
+/*--------------------------
+	
+--------------------------*/
+
+
+/*--------------------------
+	フォントの設定
+--------------------------*/
+$fontsize: 16; // 基本フォントサイズ
+$fontsize-rem: $fontsize / 10; // 基本フォントサイズ(rem)
+
+// ゴシック(ベーシック)
+$font-family01: Arial, "Helvetica Neue",'Hiragino Kaku Gothic ProN',Osaka,メイリオ,Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+
+// ゴシック(今風)
+$font-family02: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+// 明朝
+$font-family-mincho: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", serif;
+
+
+/*--------------------------
+	カラーの設定
+--------------------------*/
+$main-color: #333; // メインのカラー
+$sub-color: #f00; // サブのカラー
+$base-color: #eee; // ベースのカラー (背景など) 
+
+
+$width: 980px; // メインコンテンツ横幅(innerのwidth)
+
+// ブレイクポイント
+$bp-tab: 1024px; // タブレット
+$bp-sp: 640px;	// スマホ
